@@ -29,11 +29,11 @@ const taylor = new Admission('Taylor Whathisname', 'Dr. Suess', "friday the 13th
 const mcdonald = new Admission('Old McDonald', 'Elesa Mengesha', "April Fools", "April 4th")
 
 const displayAllAdmissions = (user) => {
-  if (user['position']) {
+  if (user['position']==='Doctor' || user['position']==="Nurse") {
     let i = 0;
     const log = admissions.length;
     console.log(
-      "Patient Name         Attending     Admit Time      Discharge Time Physician\n===========================================================================\n")
+      "Dipslaying all admissions for " + user['name'] + "\nPatient Name         Attending     Admit Time      Discharge Time Physician\n===========================================================================\n")
     while (i < log) {
       console.log(admissions[i].patientName + '    ' + admissions[i].attendingPhysician + '    ' + admissions[i].admitTime + '    ' + admissions[i].dischargeTime);
       i += 1;
@@ -46,7 +46,8 @@ const displayAllAdmissions = (user) => {
 }
 
 const amanuelyihdego = new Person('Amanuel Yihdego')
-const elesamengesha = new Employee('Amanuel Yihdego', 'Doctor')
+const negistiegiday = new Employee('Negistie Teklue', 'Janitor')
+const elesamengesha = new Employee('Elesa Mengesha', 'Doctor')
 
 displayAllAdmissions(amanuelyihdego);
 displayAllAdmissions(elesamengesha);
