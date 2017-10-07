@@ -28,18 +28,28 @@ const taylor = new Admission('Taylor Whathisname', 'Dr. Suess', "friday the 13th
 
 const mcdonald = new Admission('Old McDonald', 'Elesa Mengesha', "April Fools", "April 4th")
 
-const displayAllAdmissions = () => {
-  let i = 0;
-  const log = admissions.length;
-  console.log(
-    "Patient Name         Attending     Admit Time      Discharge Time Physician\n===========================================================================\n")
-  while (i < log) {
-    console.log(admissions[i].patientName + '    ' + admissions[i].attendingPhysician + '    ' + admissions[i].admitTime + '    ' + admissions[i].dischargeTime);
-    i += 1;
+const displayAllAdmissions = (user) => {
+  if (user['position']) {
+    let i = 0;
+    const log = admissions.length;
+    console.log(
+      "Patient Name         Attending     Admit Time      Discharge Time Physician\n===========================================================================\n")
+    while (i < log) {
+      console.log(admissions[i].patientName + '    ' + admissions[i].attendingPhysician + '    ' + admissions[i].admitTime + '    ' + admissions[i].dischargeTime);
+      i += 1;
+    }
+    // unable to use else case GET HELP
+    // else {
+    //   console.log('you shall not pass')
+    // }
   }
 }
 
-displayAllAdmissions();
+const amanuelyihdego = new Person('Amanuel Yihdego')
+const elesamengesha = new Employee('Amanuel Yihdego', 'Doctor')
+
+displayAllAdmissions(amanuelyihdego);
+displayAllAdmissions(elesamengesha);
 
 const displaySomeAdmissions = (some) => {
   let i = 0;
