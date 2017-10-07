@@ -1,3 +1,16 @@
+class Person {
+  constructor(name){
+    this.name = name;
+  }
+}
+
+class Employee extends Person {
+  constructor(name, position){
+    super(name)
+    this.position = position;
+  }
+}
+
 const admissions = [];
 class Admission {
   constructor(patientName, attendingPhysician, admitTime, dischargeTime = "" ){
