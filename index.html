@@ -3,14 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Hospital Admissions</title>
-    <script src="hospital-admissions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="application.js"></script>
     </script>
   </head>
   <body>
     <h1>Hopsital Admissions App</h1>
+    <div class="login">
+      <form class="login-form">
+        <input class="user-name" type="text" name="user-name" placeholder="enter you name">
+        <input type="password" name="user-password" placeholder="enter you password">
+        <input class="login-button" type="submit" value="login">
+      </form>
+    </div>
     <div class="display-admissions">
-      <input type="submit" name="displayAll" value="Display All Admissions">
+      <input class="displayAll" type="submit" name="displayAll" value="Display All Admissions">
+    </div>
+    <div class="displaying-admissions">
+      <p>
+        Patient Name Attending Physician Admit Time Discharge Time ===========================================================================
+      </p>
     </div>
   </body>
 </html>
